@@ -18,7 +18,7 @@ class DollarTest {
     @Test
     void testEqualDollar() {
         assertEquals(new Dollar(25),new Dollar(25));
-        assertNotEquals(new Dollar(25),new Dollar(20));
+        assertNotEquals(new Dollar(20),new Frank(20));
     }
 
     @Test
