@@ -1,6 +1,6 @@
 package home.train.TDD.model;
 
-public abstract class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
@@ -9,7 +9,9 @@ public abstract class Money {
         this.currency = currency;
     }
 
-    public abstract Money times(int multiplier);
+    public Money times(int multiplier){
+        return new Money(amount*multiplier,this.currency);
+    }
 
     public String currency(){
         return currency;
@@ -27,6 +29,14 @@ public abstract class Money {
     public boolean equals(Object o){
         Money money=(Money) o;
         return amount==money.amount
-                && this.getClass().equals(o.getClass());
+                && this.currency.equals(money.currency);
+    }
+
+    @Override
+    public String toString() {
+        return "Money{" +
+                "amount=" + amount +
+                ", currency='" + currency + '\'' +
+                '}';
     }
 }
