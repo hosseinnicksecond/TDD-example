@@ -24,9 +24,9 @@ class DollarTest {
     @Test
     void testMultiplicationFrank() {
         Frank five= new Frank(5);
-        Frank product=five.time(2);
+        Frank product=five.times(2);
         assertEquals(new Frank(10),product);
-        product=five.time(3);
+        product=five.times(3);
         assertEquals(new Frank(15),product);
     }
 

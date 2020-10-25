@@ -1,7 +1,17 @@
 package home.train.TDD.model;
 
-public class Money {
+public abstract class Money {
     protected int amount;
+
+    public abstract Money times(int multiplier);
+
+    public static Dollar getDollar(int amount){
+        return new Dollar(amount);
+    }
+
+    public static Frank getFranck(int amount){
+        return new Frank(amount);
+    }
 
     @Override
     public boolean equals(Object o){
