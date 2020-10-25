@@ -1,7 +1,6 @@
 package home.train.TDD.model;
 
-public class Frank {
-    private int amount;
+public class Frank extends Money{
 
     public Frank(int amount){
         this.amount=amount;
@@ -9,11 +8,5 @@ public class Frank {
 
     Frank time(int multiplier){
       return new Frank(amount*multiplier);
-    }
-
-    @Override
-    public boolean equals(Object o){
-        Frank frank= (Frank) o;
-        return amount==frank.amount;
     }
 }
