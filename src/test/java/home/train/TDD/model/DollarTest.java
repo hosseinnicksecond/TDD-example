@@ -28,7 +28,13 @@ class DollarTest {
 
     @Test
     void testEqualFrank() {
-        assertEquals(new Frank(10),new Frank(10));
-        assertNotEquals(new Frank(15),new Frank(10));
+        assertEquals(Money.getFranck(10),Money.getFranck(10));
+        assertNotEquals(Money.getFranck(15),Money.getFranck(10));
+    }
+
+    @Test
+    void currencyEqual() {
+        assertEquals(Money.getDollar(1).currency,"USD");
+        assertEquals(Money.getFranck(1).currency,"CHF");
     }
 }

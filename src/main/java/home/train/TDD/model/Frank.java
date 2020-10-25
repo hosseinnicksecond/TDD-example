@@ -1,12 +1,11 @@
 package home.train.TDD.model;
 
 public class Frank extends Money{
-
-    public Frank(int amount){
-        this.amount=amount;
+    public Frank(int amount,String currency){
+        super(amount,currency);
     }
 
     public Money times(int multiplier){
-      return new Frank(amount*multiplier);
+      return Money.getFranck(amount*multiplier);
     }
 }

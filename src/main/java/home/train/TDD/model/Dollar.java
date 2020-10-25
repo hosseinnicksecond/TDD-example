@@ -1,12 +1,11 @@
 package home.train.TDD.model;
 
 public class Dollar extends Money{
-
-    public Dollar(int amount) {
-        this.amount = amount;
+    public Dollar(int amount,String currency) {
+        super(amount,currency);
     }
 
     public Money times(int multiplier){
-       return new Dollar(amount * multiplier);
+       return Money.getDollar(amount * multiplier);
     }
 }
