@@ -18,11 +18,11 @@ public class Money {
     }
 
     public static Money getDollar(int amount){
-        return new Dollar(amount,"USD");
+        return new Money(amount,"USD");
     }
 
     public static Money getFranck(int amount){
-        return new Frank(amount,"CHF");
+        return new Money(amount,"CHF");
     }
 
     @Override
