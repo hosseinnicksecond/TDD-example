@@ -5,11 +5,11 @@ public abstract class Money {
 
     public abstract Money times(int multiplier);
 
-    public static Dollar getDollar(int amount){
+    public static Money getDollar(int amount){
         return new Dollar(amount);
     }
 
-    public static Frank getFranck(int amount){
+    public static Money getFranck(int amount){
         return new Frank(amount);
     }
 

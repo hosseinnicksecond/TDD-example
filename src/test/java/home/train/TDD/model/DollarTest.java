@@ -8,26 +8,22 @@ class DollarTest {
 
     @Test
     public void testMultiplicationDollar(){
-        Dollar five= new Dollar(5);
-        Dollar product=five.times(2);
-        assertEquals(new Dollar(10),product);
-        product=five.times(3);
-        assertEquals(new Dollar(15),product);
+        Money five= Money.getDollar(5);
+        assertEquals(Money.getDollar(10),five.times(2));
+        assertEquals(Money.getDollar(15),five.times(3));
     }
 
     @Test
     void testEqualDollar() {
-        assertEquals(new Dollar(25),new Dollar(25));
-        assertNotEquals(new Dollar(20),new Frank(20));
+        assertEquals(Money.getDollar(25),Money.getDollar(25));
+        assertNotEquals(Money.getDollar(10),Money.getDollar(20));
     }
 
     @Test
     void testMultiplicationFrank() {
-        Frank five= new Frank(5);
-        Frank product=five.times(2);
-        assertEquals(new Frank(10),product);
-        product=five.times(3);
-        assertEquals(new Frank(15),product);
+        Money five= Money.getFranck(5);
+        assertEquals(Money.getFranck(10),five.times(2));
+        assertEquals(Money.getFranck(15),five.times(3));
     }
 
     @Test
