@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DollarTest {
+class MoneyTest {
 
     @Test
     public void testMultiplication(){
@@ -26,5 +26,14 @@ class DollarTest {
     void currencyEqual() {
         assertEquals(Money.getDollar(1).currency,"USD");
         assertEquals(Money.getFranck(1).currency,"CHF");
+    }
+
+    @Test
+    void testSimpleAddition() {
+        Money five=Money.getDollar(5);
+        Expression sum=five.plus(five);
+        Bank bank=new Bank();
+        Money reduce=bank.reduce(sum,"USD");
+        assertEquals(Money.getDollar(10),reduce);
     }
 }
